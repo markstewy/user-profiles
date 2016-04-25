@@ -9,6 +9,16 @@
     <input id="password" type="password" ng-model="user.password" placeholder="Password">
     <br />
 
+<!-- step 2: the ng-models on the input divs automatically create the variables user.userName and user.password on
+the scope even though not definedin the controller.
+
+The home.html is linked to the mainCtlr.js controller in the app.js router.
+
+once the password and userName are on the user object, ng-click (below) passes the user object as a parameter to a function in mainCtrl.js
+
+GO TO: mainCtrl in the public folder
+  -->
+
 <!--   need a button instead?-->
 <!--    <a ui-sref="profile" ng-click="login(user.userName, user.password)">Login</a>-->
     <button ng-click="login(user)">Login</button>
